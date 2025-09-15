@@ -30,13 +30,13 @@ async def _(event):
         try:
             if p.first_name:
                 return await edit_or_reply(
-                    event, f"**⎉╎ايـدي المستخـدم**  `{input_str}` **هـو** `{p.id}`"
+                    event, f"**⎉ المستخـدم**  `{input_str}` **هـو** `{p.id}`"
                 )
         except Exception:
             try:
                 if p.title:
                     return await edit_or_reply(
-                        event, f"**⎉╎ايـدي المستخـدم**  `{p.title}` **هـو** `{p.id}`"
+                        event, f"**⎉╎ المستخـدم**  `{p.title}` **هـو** `{p.id}`"
                     )
             except Exception as e:
                 LOGS.info(str(e))
@@ -47,7 +47,7 @@ async def _(event):
             bot_api_file_id = pack_bot_file_id(r_msg.media)
             await edit_or_reply(
                 event,
-                f"**⎉╎ايـدي الدردشـه : **`{event.chat_id}`\n\n**⎉╎ايـدي المستخـدم : **`{r_msg.sender_id}`\n\n**⎉╎ايـدي الميديـا : **`{bot_api_file_id}`",
+                f"**⎉╎الدردشـه : **`{event.chat_id}`\n\n**⎉╎ايـدي المستخـدم : **`{r_msg.sender_id}`\n\n**⎉╎ايـدي الميديـا : **`{bot_api_file_id}`",
             )
 
         else:
