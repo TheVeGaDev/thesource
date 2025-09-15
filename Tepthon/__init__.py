@@ -25,7 +25,7 @@ StartTime = time.time()
 tepversion = "3.3.3"
 
 if Config.UPSTREAM_REPO == "zel":
-    UPSTREAM_REPO_URL = "https://github.com/Tepthonee/thesource"
+    UPSTREAM_REPO_URL = "https://github.com/TheVeGaDev/thesource"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
