@@ -108,7 +108,8 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
                     Button.inline("المرفقـات 🪁", data="extras"),
                     Button.inline("الأدوات 💡", data="toolzed"),
                 ],
-                [
+            ]
+                    
 import re
 import random
 import time
@@ -4440,4 +4441,5 @@ async def _(event):
             [Button.inline("رجوع", data="toolzed")],
         ],
     link_preview=False)
+
 
