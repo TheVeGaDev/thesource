@@ -859,36 +859,47 @@ async def _(event):
         return
     rnryr_link = event.pattern_match.group(1)
     chat = "@msaver_bot"
+    
+    try:
         async with event.client.conversation(chat) as conv:
-        except YouBlockedUserError:
-            await event.edit("⎉╎ فـك حـظر البـوت وحـاول مجـددا @msaver_bot")
-            return
-        chat = await conv.send_message("/start")
-        checker = await conv.get_response()
-        await event.client.send_read_acknowledge(conv.chat_id)
-        if "Choose the language you like" in checker.message:
-            await checker.click(1)
+            # Your conversation code here
+            await conv.send_message("/start")
+            checker = await conv.get_response()
+            await event.client.send_read_acknowledge(conv.chat_id)
+            
+            if "Choose the language you like" in checker.message:
+                await checker.click(1)
+                await conv.send_message(rnryr_link)
+                await conv.get_response()
+                await event.client.send_read_acknowledge(conv.chat_id)
+            
             await conv.send_message(rnryr_link)
-            await conv.get_response()
+            response = await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
-        await conv.send_message(rnryr_link)
-        await conv.get_response()
-        await event.client.send_read_acknowledge(conv.chat_id)
-        media = await conv.get_response(timeout=10)
-            await event.client.send_read_acknowledge(conv.chat_id)
-            if media.media:
-                while True:
-                    media_list.append(media)
-                    try:
+            
+            media_list = []
+            if hasattr(response, 'media') and response.media:
+                media_list.append(response)
+                try:
+                    while True:
                         media = await conv.get_response(timeout=2)
                         await event.client.send_read_acknowledge(conv.chat_id)
-                    except asyncio.TimeoutError:
-                        break
-                details = media_list[0].message.splitlines()
-                await zedevent.delete()
-                await event.client.send_file(
-                    event.chat_id,
-                    media_list,
-                    caption=f"**{details[0]}**",
-                )
-                return await delete_conv(event, chat)
+                        if hasattr(media, 'media') and media.media:
+                            media_list.append(media)
+                        else:
+                            break
+                except asyncio.TimeoutError:
+                    pass
+                
+                if media_list:
+                    details = media_list[0].message.splitlines()
+                    await event.delete()
+                    await event.client.send_file(
+                        event.chat_id,
+                        media_list,
+                        caption=f"**{details[0]}**",
+                    )
+    
+    except YouBlockedUserError:
+        await event.edit("⎉╎ فـك حـظر البـوت وحـاول مجـددا @msaver_bot")
+        return
