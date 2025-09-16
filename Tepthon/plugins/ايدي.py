@@ -102,7 +102,7 @@ async def zzz_info(zthon_user, event):
     username = "@{}".format(username) if username else ("لا يـوجـد")
     zzzsinc = zelzal_sinc if zelzal_sinc else ("غيـر معلـوم")
 ################# Dev ZilZal #################
-    ZThon = f'<a href="T.me/Tepthon">ᯓ 𝗩𝗘𝗚𝗔𝗧𝗛𝗢𝗡 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗗𝗮𝘁𝗮 📟</a>'
+    ZThon = f'<a href="T.me/VeGaOne">ᯓ 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗗𝗮𝘁𝗮 📟</a>'
     ZThon += f"\n<b>⋆─┄─┄─┄─┄─┄─┄─⋆</b>\n\n"
     ZThon += f"<b>• معلومـات إنشـاء حسـاب تيليجـرام 📑 :</b>\n"
     ZThon += f"<b>- الاسـم    ⤎ </b> "
@@ -186,7 +186,7 @@ async def fetch_info(replied_user, event):
     else:
         rotbat = "العضـو 𓅫"
 ################# Dev ZilZal #################
-    ZED_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•⎚• مـعلومـات المسـتخـدم مـن بـوت تيبثـون"  
+    ZED_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•⎚• مـعلومـات المسـتخـدم مـن بـوت تليثون فيجا"  
     ZEDM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "✦ " 
     ZEDF = gvarstatus("CUSTOM_ALIVE_FONT") or "⋆─┄─┄─┄─ 𝗩𝗘𝗚𝗔𝗧𝗛𝗢𝗡 ─┄─┄─┄─⋆" 
     if gvarstatus("ZID_TEMPLATE") is None:
@@ -239,7 +239,7 @@ async def fetch_info(replied_user, event):
 async def who(event):
     "Gets info of an user"
     if (event.chat_id in ZED_BLACKLIST) and (Zel_Uid not in Zed_Vip):
-        return await edit_or_reply(event, "**- عـذرًا .. عـزيـزي 🚷\n- لا تستطيـع استخـدام هـذا الأمـر 🚫\n- فـي مجموعـة استفسـارات تيبثـون ؟!**")
+        return await edit_or_reply(event, "**- عـذرًا .. عـزيـزي 🚷\n- لا تستطيـع استخـدام هـذا الأمـر 🚫\n- فـي مجموعـة استفسـارات تليثون فيجا ؟!**")
     zed = await edit_or_reply(event, "⇆")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -296,7 +296,7 @@ async def who(event):
 async def who(event):
     "Gets info of an user"
     if (event.chat_id in ZED_BLACKLIST) and (Zel_Uid not in Zed_Vip):
-        return await edit_or_reply(event, "**- عـذرًا .. عـزيـزي 🚷\n- لا تستطيـع استخـدام هـذا الأمـر 🚫\n- فـي مجموعـة استفسـارات تيبثـون ؟!**")
+        return await edit_or_reply(event, "**- عـذرًا .. عـزيـزي 🚷\n- لا تستطيـع استخـدام هـذا الأمـر 🚫\n- فـي مجموعـة استفسـارات تليثون فيجا ؟!**")
     zed = await edit_or_reply(event, "⇆")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -369,7 +369,7 @@ async def zelzalll(event):
 @zedub.zed_cmd(pattern=f"{ZIDA}(?: |$)(.*)")
 async def hwo(event):
     if (event.chat_id in ZED_BLACKLIST) and (Zel_Uid not in Zed_Vip):
-        return await edit_or_reply(event, "**- عـذرًا .. عـزيـزي 🚷\n- لا تستطيـع استخـدام هـذا الأمـر 🚫\n- فـي مجموعـة استفسـارات تيبثـون ؟!**")
+        return await edit_or_reply(event, "**- عـذرًا .. عـزيـزي 🚷\n- لا تستطيـع استخـدام هـذا الأمـر 🚫\n- فـي مجموعـة استفسـارات تليثون فيجا ؟!**")
     zed = await edit_or_reply(event, "⇆")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -413,7 +413,7 @@ async def hwo(event):
 async def potocmd(event):
     "To get user or group profile pic"
     if (event.chat_id in ZED_BLACKLIST) and (Zel_Uid not in Zed_Vip):
-        return await edit_or_reply(event, "**- عـذرًا .. عـزيـزي 🚷\n- لا تستطيـع استخـدام هـذا الأمـر 🚫\n- فـي مجموعـة استفسـارات تيبثـون ؟!**")
+        return await edit_or_reply(event, "**- عـذرًا .. عـزيـزي 🚷\n- لا تستطيـع استخـدام هـذا الأمـر 🚫\n- فـي مجموعـة استفسـارات تليثون فيجا ؟!**")
     uid = "".join(event.raw_text.split(maxsplit=1)[1:])
     user = await event.get_reply_message()
     chat = event.input_chat
@@ -702,4 +702,3 @@ async def variable(event):
         if input_str:
             return await zed.edit("**⎉╎عـذࢪاً .. لايوجـد هنالك فـار باسـم {} ؟!.. أرسـل (.اوامر الفارات) لـعرض قائمـة الفـارات**".format(input_str))
         return await edit_or_reply(event, "**⎉╎عـذࢪاً .. لايوجـد هنالك فـار باسـم {} ؟!.. أرسـل (.اوامر الفارات) لـعرض قائمـة الفـارات**".format(input_str))
-
