@@ -102,7 +102,7 @@ async def zzz_info(zthon_user, event):
     username = "@{}".format(username) if username else ("لا يـوجـد")
     zzzsinc = zelzal_sinc if zelzal_sinc else ("غيـر معلـوم")
 ################# Dev ZilZal #################
-    ZThon = f'<a href="T.me/Tepthon">ᯓ 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗗𝗮𝘁𝗮 📟</a>'
+    ZThon = f'<a href="T.me/Tepthon">ᯓ 𝗩𝗘𝗚𝗔𝗧𝗛𝗢𝗡 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗗𝗮𝘁𝗮 📟</a>'
     ZThon += f"\n<b>⋆─┄─┄─┄─┄─┄─┄─⋆</b>\n\n"
     ZThon += f"<b>• معلومـات إنشـاء حسـاب تيليجـرام 📑 :</b>\n"
     ZThon += f"<b>- الاسـم    ⤎ </b> "
@@ -188,7 +188,7 @@ async def fetch_info(replied_user, event):
 ################# Dev ZilZal #################
     ZED_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•⎚• مـعلومـات المسـتخـدم مـن بـوت تيبثـون"  
     ZEDM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "✦ " 
-    ZEDF = gvarstatus("CUSTOM_ALIVE_FONT") or "⋆─┄─┄─┄─ 𝗧𝗘𝗣𝗧𝗛𝗢𝗡 ─┄─┄─┄─⋆" 
+    ZEDF = gvarstatus("CUSTOM_ALIVE_FONT") or "⋆─┄─┄─┄─ 𝗩𝗘𝗚𝗔𝗧𝗛𝗢𝗡 ─┄─┄─┄─⋆" 
     if gvarstatus("ZID_TEMPLATE") is None:
         caption = f"<b> {ZED_TEXT} </b>\n"
         caption += f"ٴ<b>{ZEDF}</b>\n"
@@ -702,3 +702,4 @@ async def variable(event):
         if input_str:
             return await zed.edit("**⎉╎عـذࢪاً .. لايوجـد هنالك فـار باسـم {} ؟!.. أرسـل (.اوامر الفارات) لـعرض قائمـة الفـارات**".format(input_str))
         return await edit_or_reply(event, "**⎉╎عـذࢪاً .. لايوجـد هنالك فـار باسـم {} ؟!.. أرسـل (.اوامر الفارات) لـعرض قائمـة الفـارات**".format(input_str))
+
